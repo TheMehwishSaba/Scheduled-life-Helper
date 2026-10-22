@@ -1,0 +1,176 @@
+# 🌸 Bloom & Order
+
+> **A Mindful Weekly Planner, 25–50m Pomodoro Focus Timer, Home Chores Sanctuary & Printable Stationery System**
+
+[![CI](https://github.com/bloom-and-order/planner/actions/workflows/ci.yml/badge.svg)](https://github.com/bloom-and-order/planner/actions/workflows/ci.yml)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue.svg)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-19-61dafb.svg)](https://react.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-v4-38bdf8.svg)](https://tailwindcss.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+---
+
+## 🌿 Philosophy & Core Architecture
+
+*Bloom & Order* translates proven principles of cognitive order, habit architecture, and space discipline into a serene, tactile web application and printable stationery generator.
+
+```
+"Order in your space, time, priorities, and decisions is the base for everything else blooming."
+```
+
+### The 5 Core Principles
+1. **Capture Everything in One Place:** If a task lives only in your head, you will forget it.
+2. **Decide Priority Before You Start:** Plan first, then act.
+3. **Close Open Loops:** Every unfinished task keeps taking cognitive bandwidth.
+4. **Make Fewer Decisions:** Fixed routines and checklists save mental energy.
+5. **Keep Your Space Orderly:** Reduce clutter so distractions have less to grab.
+
+---
+
+## ✨ Features
+
+### ⏱️ 25–50 Minute Pomodoro Focus Timer
+- **Flexible Ultradian Rhythm Blocks:** Toggle instantly between 25m Classic Pomodoro, 35m Balanced Block, 45m Deep Block, 50m Ultradian Focus, or fine-tune with the slider.
+- **Harmonic Singing Chime Alarm:** Custom 5-note harmonic chord (C5 523.25Hz, E5 659.25Hz, G5 783.99Hz, B5 987.77Hz, C6 1046.50Hz) synthesized using the browser's native Web Audio API (`audioChime.ts`) with organic exponential decay and zero external audio asset dependencies.
+- **Cycle Counter:** Visual blossom tracker (🌸 1 of 4 cycles) encouraging sustained work blocks paired with restorative 5–15m pauses.
+- **Mid-Focus "Parking Lot":** One-click capture field so unexpected thoughts can be parked instantly without breaking cognitive momentum.
+- **Pre-Block Ritual Checklist:** Mindful pre-flight checks (clear desk, pour fresh tea, phone in another room, single active window).
+
+### 🧹 Home Chores & Space Reset Matrix
+- **15-Minute Speed Tidy Sprint Timer:** Built-in sprint timer with gentle auditory bells for quick, energetic room resets.
+- **Sanctuary Zones:** Dedicated organizing cards for Kitchen, Study & Desk, Living Sanctuary, Bedroom, Bath & Linen, and General House.
+- **Cadence Rhythm Filters:** Filter by Daily evening resets (wipe surfaces, empty sink), Weekly deep rhythm (linens, floorboards, botanical care), and Monthly declutter (one drawer/shelf per month).
+
+### 🎓 Academic Study Schedules & Active Recall
+- **Weekly Subject Timetable:** Schedule sessions across the week with assigned duration blocks (25m, 50m, 90m) and room location tags.
+- **Botanical Retention Curve (Spaced Repetition):** Step through memory reinforcement stages: `First Learning` → `Day 1 Review` → `Day 3 Recall` → `Day 7 Practice` → `Day 30 Mastery`.
+- **Active Recall Targets:** Tag key concepts and enforce self-testing from memory before looking at answer keys.
+
+### 📅 Weekly 7-Day Planning & 60–70% Capacity Buffer
+- **Margin Rule:** Visual indicator warns when scheduled load exceeds 60–70% capacity, leaving room for life's inevitable surprises.
+- **Top 3 Priorities:** Dedicated slots for high-impact tasks each morning.
+- **Rollover & Daily Reallocation:** Advance incomplete tasks to subsequent days with a single click.
+
+### 🌙 10-Minute Evening Shutdown Wizard
+- Step-by-step guided evening wind-down: review today's accomplishments, roll over open loops, choose tomorrow's Top 3, and physically clear your workspace for tomorrow morning.
+
+### 💾 Local & Offline-First Storage
+- Full automatic state persistence via browser `localStorage` (`bloom_order_planner_v1`, `bloom_order_chores_v1`, `bloom_order_study_v1`). All changes persist safely across browser refreshes and offline sessions.
+
+### 🖨️ High-Resolution Print Studio
+- **Printable Templates:**
+  - 7-Day Botanical Spread
+  - Daily Focus & Hourly Blocks
+  - Home Chores & Space Order Matrix
+  - Academic Study Timetable & Spaced Recall
+  - Master Repeat Checklists (Weekly Shop, Sunday Reset, Travel Packing)
+  - Eisenhower Urgent vs. Important Matrix
+  - 10-Minute Evening Shutdown Card
+- **Customizable Styling:** US Letter or A4 formats, Botanical Rose & Sage, Monochrome Ink-Saver (B&W), or Vintage Wheat themes.
+- **Clean Print Engine:** Customized `@media print` CSS isolating the printable sheet for crisp paper outputs.
+
+---
+
+## 🎨 Color Palette & Design Tokens
+
+Crafted to reflect traditional French botanical stationery, pressed flowers, and linen paper:
+
+| Token | Hex | Role |
+|---|---|---|
+| **Berry Burgundy** | `#8C3246` | Primary accents, buttons, key headings |
+| **Dusty Rose** | `#DDA5A5` | Borders, subtle highlights, badge borders |
+| **Sage / Olive Green** | `#616D48` | Habits, success states, botanical foliage |
+| **Linen Ivory** | `#FAF6F0` | Main canvas background |
+| **Charcoal Ink** | `#2D2326` | Body typography |
+| **Warm Wheat** | `#C28255` | Time estimates, tea & resting accents |
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 20+ installed
+- npm 10+
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/bloom-and-order.git
+
+# Navigate into project directory
+cd bloom-and-order
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+Visit `http://localhost:3000` in your browser.
+
+### Scripts
+
+| Command | Action |
+|---|---|
+| `npm run dev` | Starts Vite dev server on port 3000 |
+| `npm run build` | Compiles TypeScript and builds optimized production bundle in `dist/` |
+| `npm run lint` | Runs TypeScript type checking (`tsc --noEmit`) |
+| `npm test` | Runs unit tests via Node native test runner and tsx |
+| `npm run preview` | Previews production build locally |
+
+---
+
+## 📁 Project Structure
+
+```
+├── .github/
+│   └── workflows/
+│       └── ci.yml               # GitHub Actions CI pipeline
+├── public/
+│   └── assets/
+│       └── botanical_still_life.jpg # Still-life artwork (no people)
+├── src/
+│   ├── components/
+│   │   ├── CaptureInboxView.tsx     # Master capture inbox & GTD triage
+│   │   ├── DailyFocusView.tsx       # 25-50m Pomodoro timer & alarm
+│   │   ├── EveningShutdownModal.tsx # 10-minute nightly shutdown wizard
+│   │   ├── FloralAccents.tsx        # Botanical SVG flourishes & wreaths
+│   │   ├── GoalMatrixView.tsx       # Eisenhower matrix & 90-day targets
+│   │   ├── HeaderNav.tsx            # Navigation header & quick action tabs
+│   │   ├── HomeChoresView.tsx       # Space resets & 15m speed-tidy timer
+│   │   ├── PrintStudioModal.tsx     # Letter / A4 printable template studio
+│   │   ├── QuickCaptureModal.tsx    # Cmd+K global quick capture dialog
+│   │   ├── RepeatChecklistsView.tsx # Recurring repeat checklists
+│   │   ├── StudySchedulesView.tsx   # Study timetable & spaced repetition
+│   │   └── WeeklyPlannerView.tsx    # 7-day spread & habit tracker
+│   ├── data/
+│   │   └── plannerData.ts           # Initial templates, chores & quotes
+│   ├── types/
+│   │   └── planner.ts               # Strict TypeScript domain interfaces
+│   ├── utils/
+│   │   ├── audioChime.ts            # Gentle Web Audio API synthesizer
+│   │   ├── plannerLogic.ts          # Capacity & Eisenhower calculations
+│   │   └── plannerLogic.test.ts     # Unit tests
+│   ├── App.tsx                      # Root application & persistence
+│   ├── index.css                    # Tailwind v4 theme & print CSS
+│   └── main.tsx                     # React 19 entry point
+├── LICENSE                          # MIT License
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
+```
+
+---
+
+## ⌨️ Keyboard Shortcuts
+
+- `⌘K` or `Ctrl+K`: Open Quick Task Capture Modal from any screen
+- `Escape`: Close any active modal or return to planner view
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
